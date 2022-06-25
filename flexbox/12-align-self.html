@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamento - Align Self</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .aling-container {
+            align-items: flex-end;
+        }
+
+        .item {
+            flex: 1;
+            background: #3bbec6;
+            color: #0e0f11;
+            text-align: center;
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .auto {
+            align-self: auto;
+        }
+        
+        .direction { 
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>row</h2>
+    <section class="flex-container aling-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">texto teste grande texto teste</div>
+        <div class="item auto">Item 4 </div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item start">texto teste grande texto teste</div>
+        <div class="item end">Item 4 </div>
+    </section>
+
+    <section class="flex-container">
+        <div class="item center">AAA</div>
+        <div class="item start">AAA</div>
+        <div class="item end">AAA</div>
+        <div class="item stretch">Lorem Ipsum is therefore always</div>
+    </section>
+
+    <h2>column</h2>
+    <section class="flex-container aling-container direction">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem Ipsum is therefore always</div>
+        <div class="item auto">Item 4 </div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item start">Lorem Ipsum is therefore always</div>
+        <div class="item end">Item 4 </div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">AAA</div>
+        <div class="item end">AAA</div>
+        <div class="item stretch">Lorem Ipsum is therefore always</div>
+    </section>
+</body>
+
+</html>
